@@ -23,22 +23,17 @@ public class PrimeFactor {
 	     * this boolean method is to check input no is prime or not
 	     */
 	    private static boolean isPrime(int number) {
-	        int i = 2;
-	        //boolean flag = true;
-	        int count = 0;
-	        if (number == 1 || number == 0) {
-	            return false;
-	        } else {
-	            while(i < (number/2)) {
-	                if (number%i == 0) {
-	                    count++;
-	                }
-	                i++;
-	            }
-	            if (count == 1)
-	                return false;
-	            return true;
-	        }
+	       boolean prime=true;
+	    	    for(int i=2;i<number;i++)
+	    	    {
+	    	        if(number%i==0)
+	    	        {
+	    	            prime=false;
+	    	            break;
+	    	        }
+
+	    	    }
+	    	    return prime;
 	    }
 
 	    /**
